@@ -1,0 +1,76 @@
+quitar la selección de los check en la bitacora que no aparesca seleccionado 
+poner la marca y submarca de vehiculo bitacora 
+poner que unidades tengo disponibles
+campo de no de serie sea unico 
+catalogo de correos 
+
+chofer correo de usua y correo de jefe 
+
+vehiculo 
+propio arrendado
+ubicación oficinas centrales o delegaciones si es delega saber que unidad es
+estatus disponible asignado 
+
+Asignación de vehiculos
+id vehi
+area 
+persona asignada 
+fecha asignación 
+fecha baja
+
+
+datepicker
+
+
+
+
+
+
+touch README md para poder crear el archivo
+
+git config --global user.name "Yonny"
+git config --global user.email "yonrich@hotmail.com"
+
+Create a new repository
+
+git init
+git add .
+git commit -m "version"
+git remote add origin git@gitlab.com:Yonny/in.git 
+git remote rm origin // esto se pone si sale de q ya existe, y se vuelve a poner la linea anterior 
+git push -u origin master  poner contraseña admin
+
+
+
+
+139 tepic 2o 207 col roma sur tuxpan y tlacotalpan 
+chilpancingo 
+Lic jimena ruiz
+credencial 
+tarjeta 
+SIJ6-90
+sab 3 -6 
+
+71590603 arath marquez 
+
+
+en laparte de bitacora el buscador no busca por nobre o vehiculo
+en listado de vehiculos no tiene buscador
+en la hora de entrada de bitacora no tiene configurado el calendario 
+no se bloquea las herramientas en la parte de la bitacora
+en empleados no hay busqueda
+
+
+
+CREATE TABLE `insus`.`puesto` (
+  `id` INT NOT NULL,
+  `codigo` VARCHAR(10) NOT NULL,
+  `descripcion` VARCHAR(45) NOT NULL,
+  `estatus` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+
+4521568106 pedro 

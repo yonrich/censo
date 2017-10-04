@@ -1,0 +1,88 @@
+uptdated_at
+CREATE TABLE `sistema_insus`.`adscripcion` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `adscripcion` VARCHAR(45) NULL,
+  `created_at` DATETIME(9) NULL,
+  `uptdated_at` DATETIME(9) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+
+nombre
+ap
+ap1
+email
+curp
+rfc
+seguro
+adscrip
+tipo
+categoria
+tabulador
+puesto
+periodo
+created_at
+updated_at
+
+
+
+  `id``Nombres``Apellidos``Email``Password``imagenurl``CURP``RFC``NoSeguro``AreaAdscripcion``TipoEmpleado``Categoria``NivelTabulador``CodigoPuesto``CuentaDebito``ClaveInterbancaria``NumEmpleado``Periodo``TotalPercepcion``TotalDeduccion``TotalPagar``remember_token``created_at``updated_at`
+
+AreaAdscripcion
+TipoEmpleado
+Categoria
+NivelTabulador
+CodigoPuesto
+CuentaDebito
+ClaveInterbancaria
+NumEmpleado
+Periodo
+  
+Contacto: Nidia VegaTeléfono: 5552681212nidia.vega@prosa.com.mx
+Administrador de Proyectos
+
+
+Datos de Contacto:Contacto: LIC. JAIME SALAZARTeléfono: 555555555jsalazar@xaalsa.com.mx
+TALEO IMPLEMENTADOR / ADMINISTRADOR / CONFIGURACION /SOPORTE
+
+Interesados enviar CV en formato word al correo de contacto, especificando pretensión económica.
+PROJECT MANAGER JR SANTA FE
+Agregar a skype jlmb2014 para llevar a cabo la entrevista, indicando la vacante.
+PARA MAYORES INFORMES 50800048 EXT 1199
+¡ÚNETE AL EQUIPO!
+
+
+
+   public function form_editar_area($area){
+          $area= area::where('id',$area)->first();    
+          return view ('formularios.form_editar_area', compact('area');
+    }
+     public function editar_area(Request $request){
+                  
+            $id=$request->input("id");
+            $area=area::find($id);
+            $area->descripcion=strtoupper( $request->input("descripcion") ) ;
+           
+             if( $area->save()){
+            return view("mensajes.msj_area_actualizado")->with("msj","Área de Adquisisción actualizado correctamente")
+             }
+            else
+            {
+            return view("mensajes.mensaje_error")->with("msj","..Hubo un error al agregar ; intentarlo nuevamente..");
+            }
+        }
+
+}
+
+
+
+
+
+/*public function buscar_area(Request $request){
+  $dato=$request->input("dato_buscado");
+  $area=area::where('id',$area)->first();
+  return view("formularios.form_area", compact('area'));
+      }
+*/
